@@ -180,7 +180,7 @@ INFO
       "--enable-mbregex",
       "--enable-bcmath",
       "--enable-calendar",
-      "--with-zlib=#{Formula['zlib'].opt_prefix}",
+      "--with-zlib=#{Formula['homebrew/dupes/zlib'].opt_prefix}",
       "--with-ldap",
       "--with-ldap-sasl=/usr",
       "--with-xmlrpc",
@@ -266,7 +266,7 @@ INFO
 
     if build.with? 'imap'
       args << "--with-imap=#{Formula['imap-uw'].opt_prefix}"
-      
+
       if build.with? 'homebrew-openssl'
         args << "--with-imap-ssl=" + Formula['openssl'].opt_prefix.to_s
       else
